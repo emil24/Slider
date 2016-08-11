@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slider</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+		<div class="kvadrat">
+			<div class="slider">Emilia Clarke</div>
+			<div class="slider">Gal Gadot</div>
+			<div class="slider">Scarlett Johansson</div>
+			<div class="slider">Gal Gadot</div>
+		</div>
+		<button onclick="rotate()">Deyish</button>
+
+
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="jquery.Jcrop.min.js"></script>
+	<script type="text/javascript">
+	var deg = 0;
+			function rotate(){
+				var slider1 = document.getElementsByClassName('slider')[0];
+				var slider2 = document.getElementsByClassName('slider')[1];
+				var slider3 = document.getElementsByClassName('slider')[2];
+				var slider4 = document.getElementsByClassName('slider')[3];
+		 deg += 90;
+				slider1.style.transform ="rotateY( "+deg+"deg) translateZ(224px)";
+				slider2.style.transform ="rotateY("+(deg+90)+"deg) translateZ(224px)";
+				slider3.style.transform ="rotateY("+(deg+180)+"deg) translateZ(224px)";
+				slider4.style.transform ="rotateY("+(deg+270)+"deg) translateZ(224px)"
+			}
+	</script>
+</body>
+</html>
